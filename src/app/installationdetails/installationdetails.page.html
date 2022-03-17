@@ -1,0 +1,41 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+  <ion-title>
+    <ion-icon src="../assets/notification-bell.svg" class="bell">
+    </ion-icon>
+    <div class="ion-text-center">
+      <img src="../assets/top-right-logo.svg" class="logo">
+    </div>
+  </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <!-- <br> -->
+    <h1 class="ion-text-center">Task Listing &ensp;</h1>
+
+  <ion-card class="detail" *ngFor="let result of  installation_details">
+    <ion-card-title class="details">Client : {{result?.Client}}</ion-card-title>
+    <ion-card-subtitle class="sub-details">Location: {{result?.Location}}</ion-card-subtitle>
+    <ion-card-subtitle class="sub-details">Installation Level : {{result?.Installation_Level}}</ion-card-subtitle>
+    <ion-card-subtitle class="sub-details">Installation Status : {{result?.Installation_Status}}</ion-card-subtitle>
+    <ion-card-subtitle class="sub-details">Date assigned : {{result?.Date_assigned}}</ion-card-subtitle>
+  </ion-card>
+
+    
+
+    
+  </div>
+  <div class="ion-text-center">
+    <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+  </div>
+  &nbsp;
+  &nbsp;
+
+
+</ion-content>

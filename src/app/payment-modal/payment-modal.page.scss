@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+ .container{
+    margin-top: 1em;
+  align-items: center;   
+}
+
+.h1{
+    color: #194E78;
+    text-align: center;
+    font-size: 16pt;
+    font-family:'Roboto';
+  }
+.label{
+    margin: 1em;
+}
+.text{
+    --placeholder-color:#6E6E6E;
+    margin-top: 2em;
+    width: 15em;
+    border: #194E78 solid;
+    
+    
+}
+.attach-button{
+    width: 0px auto; 
+    height: 8em;
+    --background:white;
+}
+.attach{
+    align-items: center;
+    margin-top: 0em;
+    height: 3em;
+    width: 7em;
+    border-radius: 10px;
+    
+}
+.btn-secondary{
+    width: 5em;
+    background-color:#6E6E6E;
+    color: white;
+    border: #6E6E6E;
+    border-radius: 5px;
+  
+ }
+  .btn-primary{
+    width: 5em;
+    background-color: #194E78;
+    border: #194E78;
+    border-radius: 5px;
+  }
+  .divider{
+    width:1em;
+    height:auto;
+    display:inline-block;
+  }
+  #buttonsdiv{
+      margin-top: 1em;
+  }
+  @media only screen and (max-width: 321px) {
+    .btn-primary{
+        margin-top: 0.1em;
+        width: 8em;
+        background-color: #194E78;
+        border: #194E78;
+      }
+       .divider{
+        width:0.2em;
+        height:auto;
+        display:inline-block;
+      }
+      #buttonsdiv{
+        margin-top: -1em;
+    }
+    .attach{
+        align-items: center;
+        margin-top: -1em;
+        height: 7em;
+        width: 15em;
+    }
+  }
+  
+
