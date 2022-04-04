@@ -1,12 +1,5 @@
-/* eslint-disable no-var */
-/* eslint-disable @typescript-eslint/member-ordering */
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable eqeqeq */
-/* eslint-disable @typescript-eslint/semi */
-/* eslint-disable @typescript-eslint/dot-notation */
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Platform } from '@ionic/angular';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-newmalfunction',
   templateUrl: './newmalfunction.page.html',
@@ -14,28 +7,10 @@ import { Platform } from '@ionic/angular';
 })
 export class NewmalfunctionPage implements OnInit {
 
-  constructor( private router: Router, public activatedRoute: ActivatedRoute, private platform: Platform) { }
+  constructor( private router: Router,) { }
 
   ngOnInit() {
-    console.log('Inside Ng On INit')
-    this.sub = this.activatedRoute.params.subscribe(params => {
-      this.refresh = params['refresh'];
-      console.log(this.refresh)
-      if (this.refresh == 'true') {
-        console.log('Refresh is True')
-        this.call_api()
-      }
-    });
   }
-  sub
-  refresh
-  call_api() {
-    var refresh = true
-    this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('../home');
-    });
-  }
-
   home() {
     this.router.navigateByUrl('home');
   }

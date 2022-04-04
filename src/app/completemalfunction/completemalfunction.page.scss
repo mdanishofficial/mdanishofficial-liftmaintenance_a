@@ -24,27 +24,18 @@
   .flex-container{
       justify-content: center;
   }
-  .btn2{
+  .btn-primary{
     width: 20em;
     background-color: #194E78;
     border: #194E78;
     font-size: 13px;
-    height: 3em;
-    border-radius: 0.5em;
-    color:white ;
-
   }
-  .btn1{
+  .btn-secondary{
    width: 15em;
     background-color: #F5F5F5;
     color: #6E6E6E;
-     border: #6E6E6E;
+    border: #6E6E6E;
     font-size: 12px;
-    height: 3em;
-    border-radius: 0.5em;
-   
-   
-   
   }
   .divider{
     width:3em;
@@ -76,7 +67,7 @@
         float: left;
     }
   .card{
-      background:#FCFCFC;
+      --background:#FCFCFC;
       padding: 1em;
       padding-top: 0.5em;
       margin-top: 1.5em;

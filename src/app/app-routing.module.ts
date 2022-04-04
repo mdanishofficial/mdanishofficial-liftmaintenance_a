@@ -50,7 +50,7 @@ const routes: Routes = [
     loadChildren: () => import('./update-malfunction/update-malfunction.module').then( m => m.UpdateMalfunctionPageModule)
   },
   {
-    path: 'unpaid-bill/:refresh',
+    path: 'unpaid-bill',
     loadChildren: () => import('./unpaid-bill/unpaid-bill.module').then( m => m.UnpaidBillPageModule)
   },
 

@@ -24,27 +24,19 @@
   .flex-container{
       justify-content: center;
   }
-  .btn1{
-    width: 15em;
+  .btn-primary{
+    width: 12em;
     background-color: #194E78;
     border: #194E78;
-    font-size: 13px;
-    height: 3em;
-    border-radius: 0.5em;
-    color:white ;
-
+    font-size: 15px;
+      
   }
-  .btn2{
-   width: 20em;
+  .btn-secondary{
+    width: 17em;
     background-color: #F5F5F5;
     color: #6E6E6E;
-     border: #6E6E6E;
-    font-size: 12px;
-    height: 3em;
-    border-radius: 0.5em;
-   
-   
-   
+    border: #6E6E6E;
+     font-size: 13px;
   }
   .divider{
     width:1em;

@@ -40,8 +40,7 @@ export class HomePage {
 
   bills() {
     console.log('inside Installation');
-    const refresh=true;
-    this.router.navigateByUrl('unpaid-bill/' + refresh);
+    this.router.navigateByUrl('unpaid-bill');
   }
 
   installation_data = [
