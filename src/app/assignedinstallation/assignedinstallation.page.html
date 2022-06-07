@@ -6,20 +6,19 @@
 <ion-header class="header">
   <!-- <ion-navbar class="navbar"> -->
   <ion-title>
-    <ion-icon src="../assets/notification-bell.svg" class="bell">
+    <ion-icon src="../assets/notification-bell.svg" class="bell" (click)="notifications()">
     </ion-icon>
     <div class="ion-text-center">
       <img src="../assets/top-right-logo.svg" class="logo">
     </div>
   </ion-title>
-  <!-- </ion-navbar> -->
 </ion-header>
 <ion-content overflow-scroll="true">
   <div class="container">
     <!-- <br> -->
     <h1 class="ion-text-center">Task Listing &ensp;</h1>
 
-    <ion-card class="detail" *ngFor="let result of  assigned_task">
+    <ion-card class="detail" *ngFor="let result of  assigned_task let i=index "  (click)="taskdetails(i)">
       <ion-card-title class="details">Client : {{result?.Client}}</ion-card-title>
       <ion-card-subtitle class="sub-details">Location : {{result?.Location}}</ion-card-subtitle>
       <ion-card-subtitle class="sub-details">Installation Level : {{result?.Installation_Level}}</ion-card-subtitle>

@@ -14,9 +14,7 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['./paid-bills.page.scss'],
 })
 export class PaidBillsPage implements OnInit {
-
   constructor(private router:Router,  public activatedRoute: ActivatedRoute, private platform: Platform) { }
-
   ngOnInit() {
     console.log('Inside Ng On INit')
     this.sub = this.activatedRoute.params.subscribe(params => {
@@ -36,9 +34,6 @@ export class PaidBillsPage implements OnInit {
       this.router.navigateByUrl('home');
     });
   }
-
-
-
   bill_data = [
     {
       bill_id: 'TD24153',
@@ -51,7 +46,8 @@ export class PaidBillsPage implements OnInit {
       bill_id: 'TD24153',
       bill_amount: '350 Riyals',
       bill_status: 'unpaid',
-      bill_date: 'Sunday,23-03-2020'
+      bill_date: 'Sunday,23-03-2020',
+      bill_type: 'Parts',
     },
     {
       bill_id: 'TD24153',
@@ -59,10 +55,8 @@ export class PaidBillsPage implements OnInit {
       bill_type: 'Parts',
       bill_status: 'unpaid',
       bill_date: 'Sunday,23-03-2020',
-
     },
   ]
-
   home() {
     this.router.navigateByUrl('home');
   }
@@ -76,6 +70,19 @@ export class PaidBillsPage implements OnInit {
   billdetails(id) {
     this.router.navigateByUrl('/billdetails/' + id);
   }
-
-
+  profile(){
+    this.router.navigateByUrl('profile');
+  }
+  settings(){
+    this.router.navigateByUrl('settings');
+  }
+  language(){
+    this.router.navigateByUrl('languages');
+  }
+  faq(){
+    this.router.navigateByUrl('faq');
+  }
+  notifications(){
+    this.router.navigateByUrl('notifications');
+  }
 }

@@ -36,6 +36,13 @@ export class InstallationdetailsPage implements OnInit {
     });
   }
 
+  taskdetails(id) {
+    console.log (id)
+  this.router.navigateByUrl('task-details/'+id );
+}
+notifications(){
+  this.router.navigateByUrl('notifications');
+}
   back() {
     this.router.navigateByUrl('home');
   }

@@ -1,6 +1,5 @@
 <div class="nav-wrapper" style="background: white;height: 5em;"></div>
 <ion-app> 
-   
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,7 @@
 <ion-header class="header">
     <!-- <ion-navbar class="navbar"> -->
     <ion-title>
-        <ion-icon src="../assets/notification-bell.svg" class="bell">
+        <ion-icon src="../assets/notification-bell.svg" class="bell"  (click)="notifications()">
         </ion-icon>
         <div class="ion-text-center">
             <img src="../assets/top-right-logo.svg" class="logo">
@@ -52,7 +51,7 @@
             </div>
             <div class="card-body">
                 <div class="ion-text-center">
-                    <h6 class="card-title">Installation Details</h6>
+                    <h6 class="card-title2">Installation Details</h6>
                 </div>
             </div>
         </div>
@@ -64,7 +63,7 @@
             </div>
             <div class="card-body">
                 <div class="ion-text-center">
-                    <h6 class="card-title">Assigned Installation</h6>
+                    <h6 class="card-title2">Assigned Installation</h6>
                 </div>
             </div>
         </div>
@@ -108,7 +107,7 @@
 <!-- <footer> -->
     <div class="white1"></div>
     <ion-tab-bar slot="bottom">
-        <ion-tab-button (click)="home()">
+        <ion-tab-button (click)="profile()">
             <ion-icon src="assets/user.svg"></ion-icon>
         </ion-tab-button>
 
@@ -128,7 +127,7 @@
         </ion-tab-button>
 
         <ion-tab-button>
-            <ion-icon src="assets/question.svg" (click)="inquiries()"></ion-icon>
+            <ion-icon src="assets/question.svg" (click)="faq()"></ion-icon>
         </ion-tab-button>
     </ion-tab-bar>
 

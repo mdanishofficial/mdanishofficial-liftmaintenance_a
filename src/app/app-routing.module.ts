@@ -42,7 +42,7 @@ const routes: Routes = [
     loadChildren: () => import('./completemalfunction/completemalfunction.module').then( m => m.CompletemalfunctionPageModule)
   },
   {
-    path: 'malfunctiondetails',
+    path: 'malfunctiondetails/:id',
     loadChildren: () => import('./malfunctiondetails/malfunctiondetails.module').then( m => m.MalfunctiondetailsPageModule)
   },
   {
@@ -65,6 +65,30 @@ const routes: Routes = [
   {
     path: 'payment-modal',
     loadChildren: () => import('./payment-modal/payment-modal.module').then( m => m.PaymentModalPageModule)
+  },
+  {
+    path: 'task-details/:id',
+    loadChildren: () => import('./task-details/task-details.module').then( m => m.TaskDetailsPageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then( m => m.FAQPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
+  {
+    path: 'languages',
+    loadChildren: () => import('./languages/languages.module').then( m => m.LanguagesPageModule)
   },
 
 ];

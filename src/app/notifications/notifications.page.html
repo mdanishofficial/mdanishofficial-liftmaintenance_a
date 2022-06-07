@@ -1,0 +1,102 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+  <ion-title>
+      <ion-icon src="../assets/notification-bell.svg" class="bell"  (click)="notifications()">
+      </ion-icon>
+      <div class="ion-text-center">
+          <img src="../assets/top-right-logo.svg" class="logo">
+      </div>
+  </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <!-- <br> -->
+    <h1 class="ion-text-center">Notifications</h1>
+<br>
+    <ion-card class="card" >
+      <div class="flex-container">
+        <div style="float: left;">
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">Complain Response</h6>
+          <div class="detail">
+            <ion-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</ion-text>
+          </div>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Sender:Maintenance Manager</ion-text>
+            </div>
+            <div class="status">
+              <ion-text>10-01-2022 14:31:54</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="card" >
+      <div class="flex-container">
+        <div style="float: left;">
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">Malfunction</h6>
+          <div class="detail">
+            <ion-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</ion-text>
+          </div>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Sender:Installation Manager</ion-text>
+            </div>
+            <div class="status">
+              <ion-text>10-01-2022 14:31:54</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <div class="ion-text-center">
+      <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+    </div>
+  </div>
+</ion-content>
+<!-- <footer> -->
+  <div class="white1"></div>
+  <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="profile()">
+          <ion-icon src="assets/user.svg"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/email.svg" (click)="language()"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button>
+          <ion-fab vertical="bottom" horizontal="center" slot="fixed" class="fab-button" (click)="home()">
+              <ion-fab-button>
+                  <ion-icon src="assets/home.svg" (click)="home()"></ion-icon>
+              </ion-fab-button>
+          </ion-fab>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/setting.svg" (click)="settings()"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/question.svg" (click)="faq()"></ion-icon>
+      </ion-tab-button>
+  </ion-tab-bar>
+
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed"
+  style="background-color: #194E78; margin-bottom: 7px; border-radius: 30px;" (click)="home()">
+  <ion-fab-button class="fab-button">
+      <ion-icon name="home"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<!-- <"footer"> -->

@@ -36,9 +36,16 @@ export class TodayinstallationPage implements OnInit {
   }
 
 
+  taskdetails(id) {
+    console.log (id)
+  this.router.navigateByUrl('task-details/'+id );
+}
 
   back() {
     this.router.navigateByUrl('home');
+  }
+  notifications(){
+    this.router.navigateByUrl('notifications');
   }
   today_installation = [
     {

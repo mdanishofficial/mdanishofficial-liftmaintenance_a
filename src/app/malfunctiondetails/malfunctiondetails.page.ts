@@ -9,19 +9,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController, Platform } from '@ionic/angular';
-import { MapPage } from '../map/map.page'; 
-
-
+import { MapPage } from '../map/map.page';
 @Component({
   selector: 'app-malfunctiondetails',
   templateUrl: './malfunctiondetails.page.html',
   styleUrls: ['./malfunctiondetails.page.scss'],
 })
 export class MalfunctiondetailsPage implements OnInit {
-
   constructor(private router: Router, public modalController:
-     ModalController, public activatedRoute: ActivatedRoute, private platform: Platform) { }
-
+    ModalController, public activatedRoute: ActivatedRoute, private platform: Platform) { }
   ngOnInit() {
     console.log('Inside Ng On INit')
     this.sub = this.activatedRoute.params.subscribe(params => {
@@ -32,6 +28,10 @@ export class MalfunctiondetailsPage implements OnInit {
         this.call_api()
       }
     });
+    this.sub = this.activatedRoute.params.subscribe(params => {
+      this.id = params['id'];
+      console.log(this.id)
+    });
   }
   sub
   refresh
@@ -41,20 +41,31 @@ export class MalfunctiondetailsPage implements OnInit {
       this.router.navigateByUrl('../completemalfunction');
     });
   }
-
-
-  malfunctionupdate(){
-this.router.navigateByUrl('update-malfunction');
+  id
+  malfunction_details = [
+    {
+      client_name: 'Shadab Khan',
+      lift_no: '4',
+      city: 'Dubai',
+      address: 'World Trade Center Building',
+      assigned_time: 'Sunday, 23-03-2020',
+      location: 'Latitude: 33° 43 17.33" N Longitude: 33° 43 17.33" N ',
+      lift_stops: '6',
+      status: 'New',
+      type: 'Unidentified',
+      level: 'Danger',
+    },
+  ]
+  malfunctionupdate() {
+    this.router.navigateByUrl('update-malfunction');
   }
-
   back() {
     this.router.navigateByUrl('completemalfunction');
-
   }
-
-
+  notifications() {
+    this.router.navigateByUrl('notifications');
+  }
   async map() {
-
     console.log('map popup');
     const modal = await this.modalController.create({
       component: MapPage,
@@ -62,5 +73,4 @@ this.router.navigateByUrl('update-malfunction');
     });
     return await modal.present();
   }
-
 }

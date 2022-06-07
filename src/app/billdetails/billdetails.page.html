@@ -8,7 +8,7 @@
 <ion-header class="header">
   <!-- <ion-navbar class="navbar"> -->
   <ion-title>
-    <ion-icon src="../../assets/notification-bell.svg" (click)="notifications()" class="bell">
+    <ion-icon src="../../assets/notification-bell.svg" class="bell" (click)="notifications()">
     </ion-icon>
     <div class="ion-text-right">
       <img src="../../assets/top-right-logo.svg" class="logo">
@@ -24,7 +24,7 @@
       <h1 class="ion-text-center">Bill #{{bill_data[id]?.bill_id}}</h1>
       <ion-text class="date">Date: {{bill_data[id]?.bill_date}}</ion-text>
       <br>
-      <br> koe adnroid stuido ki commands is prokect mn to ni chlati rahi??? nahi
+      <br>
       <h2 class="h2">Bill Details </h2>
       <br>
       <!-- </div> -->
@@ -71,3 +71,9 @@
             (click)="presentModalUpdatePayment()">Update Payment</button>
           <div class="divider"></div>
           <button type="button" class="btn btn-secondary " (click)="back()">Back</button>
+        </ion-tab-bar>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

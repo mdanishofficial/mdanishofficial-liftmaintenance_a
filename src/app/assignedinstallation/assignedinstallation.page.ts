@@ -34,9 +34,16 @@ export class AssignedinstallationPage implements OnInit {
       this.router.navigateByUrl('../home');
     });
   }
-
+  taskdetails(id) {
+    console.log (id)
+  this.router.navigateByUrl('task-details/'+id );
+}
   back() {
     this.router.navigateByUrl('home');
+  }
+  notifications(){
+    console.log('inside notifications');
+    this.router.navigateByUrl('notifications');
   }
   assigned_task = [
     {

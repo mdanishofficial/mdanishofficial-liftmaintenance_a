@@ -11,24 +11,24 @@
 background-color: #194E78;
  position: initial;
 }
-.bell{
-margin-left: 0.5em;
-position: absolute;
-top: 5px;
-left: 0.5em;
-width: 24px;
-height: 30px;
-
+.bell {
+  margin-left: 0.5em;
+  position: absolute;
+  top: 8px;
+  left: 0.2em;
+  width: 21px;
+  height: 23px;
 }
 
 .logo{
-  position: relative ;
-  top: -5px;
-  right: 0px;
-  width: 68px;
-  height: 86px;
-  justify-content: center;
+ position: relative ;
+ top: -5px;
+ right: 0px;
+ width: 68px;
+ height: 83px;
+ justify-content: center;
 }
+
 
 .ion-text-title{
   margin-top: 1.5em;
@@ -45,15 +45,15 @@ height: 30px;
  .text{
 font-weight:bold;
 font-family: Roboto;
-margin-bottom:  0.1em;
+margin-bottom:  -0.3em;
 color:#194E78 ;
-font-size:38px;
+font-size:33px;
 
 
 }
 .white{
     width: 100%;
-    height: 1.5em;
+    height: 2em;
     border-top-style: none;
 }
 .white1{
@@ -63,12 +63,15 @@ font-size:38px;
 }
 
 .ion-text-center{
-    margin-top: 0.1em;
+    margin-top: 0.5em;
 }
 .card{
-    width: 170px;
-    height: 98px;
+    width: 166px;
+    height: 85px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 0.30rem;
+    margin-inline: 0.3em;
+    
 }
 .card-img-top{
     width: 43px;
@@ -77,19 +80,28 @@ font-size:38px;
     font-weight: bold;
 }
 .card-title{
-    margin-top: -1.1em;
+    margin-top: -0.7em;
     color: #194E78;
     font-weight: 800;
-    font-size:15px;
+    font-size:12px;
     font-family: Roboto;
 
 
 }
+.card-title2{
+  margin-top: -1.2em;
+  color: #194E78;
+  font-weight: 800;
+  font-size:12px;
+  font-family: Roboto;
+
+
+}
 .card-title1{
-    margin-top: -0.5em;
+    margin-top: -1.2em;
     color: #194E78;
     font-weight: 800;
-    font-size:15px;
+    font-size:12px;
     font-family: Roboto;
 
 
@@ -101,7 +113,7 @@ font-size:38px;
     font-family:Roboto ;
     text-align: center;
     margin-top:30px ;
-    font-size:30px;
+    font-size:23px;
     font-weight: 800;
 }
 
@@ -116,12 +128,14 @@ font-size:38px;
     margin: 10px;
 color: #194E78;
 font-family: Roboto;
-font-size: 25px;
+font-size: 19px;
 font-weight: 700;
 }
 .sub-details{
      margin: 5px 5px 5px 15px;
 font-family: Roboto;
+font-size: 12px;
+    font-weight: 400;
 
 }
 
@@ -143,8 +157,8 @@ ion-tab-bar, ion-tab-button{
   }
 @media only screen and (max-width: 600px) {
   .card{
-    width: 140px;
-    height: 98px;
+    width: 151px;
+    height: 85px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 

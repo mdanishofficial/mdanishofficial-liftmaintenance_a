@@ -36,6 +36,43 @@ export class NewmalfunctionPage implements OnInit {
     });
   }
 
+  new_mulfunction = [
+    {
+      client_name: 'Akbar Khan',
+      assigned_time: 'Sunday, 23-03-2020',
+      status: 'New',
+      type: 'Unidentified',
+      level: 'Danger',
+      
+    },
+    {
+      client_name: 'Mustafa Khan',
+      assigned_time: 'Sunday, 23-03-2020',
+      status: 'New',
+      type: 'Unidentified',
+      level: 'Normal',
+      
+    }
+  ]
+
+
+  profile(){
+    this.router.navigateByUrl('profile');
+  
+  }
+  settings(){
+    this.router.navigateByUrl('settings');
+  }
+  language(){
+    this.router.navigateByUrl('languages');
+  }
+  faq(){
+    this.router.navigateByUrl('faq');
+  }
+  notifications(){
+    this.router.navigateByUrl('notifications');
+  }
+
   home() {
     this.router.navigateByUrl('home');
   }

@@ -14,6 +14,24 @@ export class HomePage {
   home(){
     this.router.navigateByUrl('home');
   }
+  profile(){
+    this.router.navigateByUrl('profile');
+  
+  }
+  settings(){
+    this.router.navigateByUrl('settings');
+  }
+  language(){
+    this.router.navigateByUrl('languages');
+  }
+  faq(){
+    this.router.navigateByUrl('faq');
+  }
+  notifications(){
+    this.router.navigateByUrl('notifications');
+  }
+
+
   totalinstallation() {
     console.log('inside Installation');
   this.router.navigateByUrl('totalinstallation');
@@ -45,17 +63,17 @@ export class HomePage {
   }
 
   installation_data = [
-    { Installation_id:'1',
+    { Installation_id:'01',
       Client_Name: 'Naeem Arshad',
       Client_Location: 'Abu Dhabi',
     },
     {
-      Installation_id: '2',
+      Installation_id: '02',
       Client_Name : 'Naeem Arshad',
       Client_Location: 'Abu Dhabi',
     },
 {
-      Installation_id: '3',
+      Installation_id: '03',
       Client_Name: 'Naeem Arshad',
       Client_Location : 'Abu Dhabi',
     }

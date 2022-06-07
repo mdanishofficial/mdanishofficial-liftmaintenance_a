@@ -40,12 +40,14 @@ export class UpdateMalfunctionPage implements OnInit {
   }
 
   back(){
-    this.router.navigateByUrl('malfunctiondetails');
+    this.router.navigateByUrl('malfunctiondetails/id');
 
   }
   map() {
     this.router.navigateByUrl('map');
   }
-
+notifications(){
+  this.router.navigateByUrl('notifications');
+}
 
 }

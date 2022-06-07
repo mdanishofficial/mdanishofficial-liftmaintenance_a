@@ -24,52 +24,32 @@
         <button type="button" class="btn2" (click)="completed()">Completed Malfunctions</button>
       </ion-tab-bar>
     </div>
+    
     <div class="flex-container">
-      <ion-card class="card" (click)="malfunctionsDetails()">
+      <ion-card class="card" *ngFor=" let result of malfunction_data let i=index" (click)="malfunctionsDetails(i)">
         <div class="square">
-          <div>
+          
             <div class="complain">
-              <h3 class="h3">Client : Shadab Khan</h3>
+              <h3 class="h3">Client : {{result?.client_name}}</h3>
             </div>
             <br>
             <br>
-          </div>
-
-      
-          <ion-text class="date">Assigned Time : Sunday, 23-03-2020<br></ion-text>
-          <ion-text class="date">Status : New<br></ion-text>
-          <ion-text class="date">Type : Unidentified<br></ion-text>
-          <ion-text class="date">Level :</ion-text>
-          <ion-text class="redtext"> Danger<br></ion-text>
+  
+          <ion-text class="date">Assigned Time : {{result?.assigned_time}}<br></ion-text>
+          <ion-text class="date">Status : {{result?.status}}<br></ion-text>
+          <ion-text class="date">Type : {{result?.type}}<br></ion-text>
+          <ion-text class="date"> Level : </ion-text>
+          <ion-text class="yellowtext"> {{result?.level}}<br></ion-text>
         </div>
-        <!-- </div> -->
-      </ion-card>
-      <ion-card class="card">
-        <div class="square">
-          <div>
-            <div class="complain">
-              <h3 class="h3">Client : Shadab Khan</h3>
-            </div>
-            <br>
-            <br>
-          </div>
-          <ion-text class="date">Assigned Time : Sunday, 23-03-2020<br></ion-text>
-          <ion-text class="date">Status : New<br></ion-text>
-          <ion-text class="date">Type : Unidentified<br></ion-text>
-          <ion-text class="date">Level :</ion-text>
-          <ion-text class="yellowtext"> Danger<br></ion-text>
-        </div>
-        <!-- </div> -->
       </ion-card>
     </div>
-
   </div>
 </ion-content>
 
 <!-- <footer> -->
     <div class="white"></div>
     <ion-tab-bar class="foot" slot="bottom">
-        <ion-tab-button (click)="home()">
+        <ion-tab-button (click)="profile()">
             <ion-icon src="assets/user.svg"></ion-icon>
         </ion-tab-button>
 
@@ -89,7 +69,7 @@
         </ion-tab-button>
 
         <ion-tab-button>
-            <ion-icon src="assets/question.svg" (click)="inquiries()"></ion-icon>
+            <ion-icon src="assets/question.svg" (click)="faq()"></ion-icon>
         </ion-tab-button>
     </ion-tab-bar>
 

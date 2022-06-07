@@ -1,0 +1,76 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+  <ion-title>
+    <ion-icon src="../../assets/notification-bell.svg" class="bell">
+    </ion-icon>
+    <div class="ion-text-right">
+      <img src="../../assets/top-right-logo.svg" class="logo">
+    </div>
+  </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <div *ngIf="malfunction_details"></div>
+    <h1 class="ion-text-center">Task Detail</h1>
+    <ion-text class="date">{{malfunction_details[id]?.client_date}}<br></ion-text>
+    <h6 class="client">Client : {{malfunction_details[id]?.client_name}} </h6>
+    <hr class="hr">
+    <h6 class="client">Lift Number : {{malfunction_details[id]?.lift_no}} </h6>
+    <hr class="hr">
+    <h6 class="client">City : {{malfunction_details[id]?.city}} </h6>
+    <hr class="hr">
+    <h6 class="client">Address : {{malfunction_details[id]?.address}}</h6>
+    <hr class="hr">
+    <h6 class="client">Location</h6>
+    <ion-icon src="../../assets/eye_icon.svg" class="eye" (click)="map()"></ion-icon>
+    <ion-text class="date">{{malfunction_details[id]?.location}}<br></ion-text>
+    <hr class="hr">
+    <h6 class="client">Number of lift stops : {{malfunction_details[id]?.lift_stops}}</h6>
+    <hr class="hr">
+    <h6 class="client">Type of Building : {{malfunction_details[id]?.building_type}} </h6>
+    <hr class="hr">
+    <h6 class="client">Engine Type : {{malfunction_details[id]?.Engine_type}} </h6>
+    <hr class="hr">
+    <h6 class="client">Door Type : {{malfunction_details[id]?.Door_type}} </h6>
+    <hr class="hr">
+    <h6 class="client">Installation Level : {{malfunction_details[id]?. installtion_level}} </h6>
+    <hr class="hr">
+    
+  <!-- datepicker -->
+    <div class="row justify-content-center">
+        <div class="col-lg-3 col-sm-6">
+            <label for="startDate">Start</label>
+            <input id="startDate" class="form-control" type="date" />
+            <!-- <span id="startDateSelected"></span> -->
+        </div>
+        
+        <div class="col-lg-3 col-sm-6">
+            <label for="endDate">End</label>
+            <input id="endDate" class="form-control" type="date" />
+            <!-- <span id="endDateSelected"></span> -->
+        </div>
+    </div>
+    <!-- datepicker ending -->
+    <h6 class="client">Installation Level Detail {{malfunction_details[id]?. installtion_level_detail}} </h6>
+    <ion-card class="card-detailed">
+      <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"> Installation Level Detail</textarea>
+    </ion-card>
+
+    <div class="ion-text-center">
+      <div class="flex-container">
+        <button type="button" class="btn btn-primary" id="language">Complete Task</button>
+        <div class="divider1"></div>
+        <button type="button" class="btn btn-secondary" id="language" (click)="back()">Back</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</ion-content>

@@ -47,7 +47,7 @@
               </ion-text>
             </div>
             <div class="ion-text-right">
-              <ion-text>Date: {{result?.bill_date}}</ion-text>
+              <ion-text>{{result?.bill_date}}</ion-text>
             </div>
           </div>
         </div>
@@ -66,97 +66,13 @@
           </ion-chip>
         </div> 
       </div>
-      <!-- <div class="ion-text-center">
-      <ion-chip class="ion-chip-left" (click)="presentModalUpdatePayment()">
-        <ion-icon src="../../assets/updateicon.svg" class="ion-icon"></ion-icon>
-        <ion-label>Update</ion-label>
-      </ion-chip>
-    </div> -->
-    </ion-card>
-    <!-- <ion-card class="card">
-      <div class="flex-container">
-       <div class="flex-container2">
-         <div>
-           <div>
-            <h6 class="billid">Bill # TH21145</h6>
-           </div>
-           <div>
-            <h6 class="billamount">650 Riyals</h6>
-          </div>
-         </div>
-         <div class="flex-container3">
-            <div class="parts">
-              <ion-text>Type : Renew</ion-text>
-            </div>
-            <div class="ion-text-center">
-              <ion-text class="status">Status: <ion-text class="duration2">This Month</ion-text></ion-text>
-            </div>
-            <div class="ion-text-right">
-              <ion-text> Sunday 22-02-2020</ion-text>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex-container" style="justify-content: space-evenly;">
-        <div>
-          <ion-chip class="ion-chip-left">
-            <ion-icon src="../../assets/updateicon.svg" class="ion-icon"></ion-icon>
-            <ion-label>Update</ion-label>
-          </ion-chip>
-        </div>
-        <div class="ion-text-right">
-          <ion-chip class="ion-chip-right">
-            <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon>
-            <ion-label>Resend Receipt</ion-label>
-          </ion-chip>
-        </div>
-    </div>
-    </ion-card>
-    <ion-card class="card">
-      <div class="flex-container">
-       <div class="flex-container2">
-         <div>
-           <div>
-            <h6 class="billid">Bill # TH35622</h6>
-           </div>
-           <div>
-            <h6 class="billamount">1200 Riyals</h6>
-          </div>
-         </div>
-         <div class="flex-container3">
-            <div class="parts">
-              <ion-text>Type : Installation</ion-text>
-            </div>
-            <div class="ion-text-center">
-              <ion-text class="status">Status: <ion-text class="duration3">This Month</ion-text></ion-text>
-            </div>
-            <div class="ion-text-right">
-              <ion-text> Sunday 22-02-2020</ion-text>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex-container" style="justify-content: space-evenly;">
-        <div>
-          <ion-chip class="ion-chip-left">
-            <ion-icon src="../../assets/updateicon.svg" class="ion-icon"></ion-icon>
-            <ion-label>Update</ion-label>
-          </ion-chip>
-        </div>
-        <div class="ion-text-right">
-          <ion-chip class="ion-chip-right">
-            <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon>
-            <ion-label>Resend Receipt</ion-label>
-          </ion-chip>
-        </div>
-    </div>
-    </ion-card> -->
+  </ion-card>
   </div>
 </ion-content>
 <!-- <footer> -->
 <div class="white"></div>
 <ion-tab-bar class="foot" slot="bottom">
-  <ion-tab-button (click)="home()">
+  <ion-tab-button (click)="profile()">
     <ion-icon src="assets/user.svg"></ion-icon>
   </ion-tab-button>
 
@@ -176,7 +92,7 @@
   </ion-tab-button>
 
   <ion-tab-button>
-    <ion-icon src="assets/question.svg" (click)="inquiries()"></ion-icon>
+    <ion-icon src="assets/question.svg" (click)="faq()"></ion-icon>
   </ion-tab-button>
 </ion-tab-bar>
 

@@ -77,6 +77,22 @@ export class UnpaidBillPage implements OnInit {
   home() {
     this.router.navigateByUrl('home');
   }
+  profile(){
+    this.router.navigateByUrl('profile');
+  
+  }
+  settings(){
+    this.router.navigateByUrl('settings');
+  }
+  language(){
+    this.router.navigateByUrl('languages');
+  }
+  faq(){
+    this.router.navigateByUrl('faq');
+  }
+  notifications(){
+    this.router.navigateByUrl('notifications');
+  }
 
 
 }

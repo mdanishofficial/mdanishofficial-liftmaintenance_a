@@ -78,9 +78,10 @@ export class BilldetailsPage implements OnInit {
   back() {
     const refresh = true;
     this.router.navigateByUrl('unpaid-bill/' + refresh);
-
   }
-
+notifications(){
+  this.router.navigateByUrl('notifications');
+}
   async presentModalUpdatePayment() {
     console.log('presentModalUpdatePayment popup');
     const modal = await this.modalController.create({

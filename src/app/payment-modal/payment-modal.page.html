@@ -2,19 +2,18 @@
   <h1 class="h1">Payment Receipt Update</h1>
 
   <div class="ion-text-center">
-    <ion-input placeholder="Enter the amount transferred" type="number" class="text" [(ngModel)]="amount"></ion-input>
+    <ion-input placeholder="Enter the amount... " type="number" class="text" [(ngModel)]="amount"></ion-input>
     <!-- <img src="../../assets/attach.svg" class="attach"/>
   <input type="file" name="photo" /> -->
     <!-- <ion-item> -->
     <br>
     <div>
       <div class="ion-text-center" (click)="inputFile.click()" class="#194E78-button">
-        <img src="../../assets/checked.svg" class="attach" />
+        <img src="../../assets/icon/Attach Receipt Box.svg" class="attach" />
       </div>
       <input #inputFile id="input-file" style="opacity:0" type="file" name="bill_receipt" [(ngModel)]="bill_receipt"
         (change)="uploadFiles($event)" multiple accept="image/png, image/jpeg" enctype="multipart/form-data" />
       <!-- </ion-item> -->
-      <h6 class="ab">Attach Bill Receipt </h6>
       <div *ngIf="bill_receipt !== ''" class="pathname">
         {{bill_receipt}}
       </div>

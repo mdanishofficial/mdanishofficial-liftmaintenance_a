@@ -105,7 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "UpdateMalfunctionPage": () => (/* binding */ UpdateMalfunctionPage)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 8111);
-/* harmony import */ var _C_Users_Aneeza_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_update_malfunction_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@angular-devkit/build-angular/node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./update-malfunction.page.html */ 8793);
+/* harmony import */ var _C_Users_ASUS_Moile_Installation_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_update_malfunction_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@angular-devkit/build-angular/node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./update-malfunction.page.html */ 8793);
 /* harmony import */ var _update_malfunction_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./update-malfunction.page.scss */ 8677);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 4001);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 3252);
@@ -147,10 +147,13 @@ let UpdateMalfunctionPage = class UpdateMalfunctionPage {
         });
     }
     back() {
-        this.router.navigateByUrl('malfunctiondetails');
+        this.router.navigateByUrl('malfunctiondetails/id');
     }
     map() {
         this.router.navigateByUrl('map');
+    }
+    notifications() {
+        this.router.navigateByUrl('notifications');
     }
 };
 UpdateMalfunctionPage.ctorParameters = () => [
@@ -161,7 +164,7 @@ UpdateMalfunctionPage.ctorParameters = () => [
 UpdateMalfunctionPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-update-malfunction',
-        template: _C_Users_Aneeza_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_update_malfunction_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_ASUS_Moile_Installation_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_update_malfunction_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_update_malfunction_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], UpdateMalfunctionPage);

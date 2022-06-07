@@ -6,7 +6,7 @@
 <ion-header class="header">
   <!-- <ion-navbar class="navbar"> -->
   <ion-title>
-    <ion-icon src="../../assets/notification-bell.svg" (click)="notifications()" class="bell">
+    <ion-icon src="../../assets/notification-bell.svg" class="bell" (click)="notifications()">
     </ion-icon>
     <div class="ion-text-right">
       <img src="../../assets/top-right-logo.svg" class="logo">
@@ -25,48 +25,39 @@
       </ion-tab-bar>
     </div>
     <div class="flex-container">
-      <ion-card class="card">
+     
+      
+
+      <ion-card class="card" *ngFor= "let result of new_mulfunction"   [ngClass]='result?.level === "Normal" ? "card1":  "card3"   '>
+  
+       
         <div class="square">
           <div>
             <div class="complain">
-              <h3 class="h3">Client : Shadab Khan</h3>
+              <h3 class="h3">Client : {{result?.client_name}} </h3>
             </div>
             <br>
             <br>
           </div>
-          <ion-text class="date">Assigned Time : Sunday, 23-03-2020<br></ion-text>
-          <ion-text class="date">Status : New<br></ion-text>
-          <ion-text class="date">Type : Unidentified<br></ion-text>
-          <ion-text class="date">Level :</ion-text>
-          <ion-text class="redtext"> Danger<br></ion-text>
+          <ion-text class="date">Assigned Time : {{result?.assigned_time}}<br></ion-text>
+          <ion-text class="date">Status :{{result?.status}}<br></ion-text>
+          <ion-text class="date">Type : {{result?.type}}<br></ion-text>
+
+          <ion-text class="date"  >Level : {{result?.level}} </ion-text>
         </div>
         <!-- </div> -->
+        
       </ion-card>
-      <ion-card class="card">
-        <div class="square">
-          <div>
-            <div class="complain">
-              <h3 class="h3">Client : Shadab Khan</h3>
-            </div>
-            <br>
-            <br>
-          </div>
-          <ion-text class="date">Assigned Time : Sunday, 23-03-2020<br></ion-text>
-          <ion-text class="date">Status : New<br></ion-text>
-          <ion-text class="date">Type : Unidentified<br></ion-text>
-          <ion-text class="date">Level :</ion-text>
-          <ion-text class="yellowtext"> Danger<br></ion-text>
-        </div>
-        <!-- </div> -->
-      </ion-card>
+
+    </div>
     </div>
 
-  </div>
+  
 </ion-content>
 <!-- <footer> -->
 <div class="white"></div>
 <ion-tab-bar class="foot" slot="bottom">
-  <ion-tab-button (click)="home()">
+  <ion-tab-button (click)="profile()">
     <ion-icon src="assets/user.svg"></ion-icon>
   </ion-tab-button>
 
@@ -86,7 +77,7 @@
   </ion-tab-button>
 
   <ion-tab-button>
-    <ion-icon src="assets/question.svg" (click)="inquiries()"></ion-icon>
+    <ion-icon src="assets/question.svg" (click)="faq()"></ion-icon>
   </ion-tab-button>
 </ion-tab-bar>
 

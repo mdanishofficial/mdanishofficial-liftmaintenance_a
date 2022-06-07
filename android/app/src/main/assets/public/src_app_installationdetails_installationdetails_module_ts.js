@@ -11,7 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Select</title>\n</head>\n<ion-header class=\"header\">\n  <!-- <ion-navbar class=\"navbar\"> -->\n  <ion-title>\n    <ion-icon src=\"../assets/notification-bell.svg\" class=\"bell\">\n    </ion-icon>\n    <div class=\"ion-text-center\">\n      <img src=\"../assets/top-right-logo.svg\" class=\"logo\">\n    </div>\n  </ion-title>\n  <!-- </ion-navbar> -->\n</ion-header>\n<ion-content overflow-scroll=\"true\">\n  <div class=\"container\">\n    <!-- <br> -->\n    <h1 class=\"ion-text-center\">Task Listing &ensp;</h1>\n\n  <ion-card class=\"detail\" *ngFor=\"let result of  installation_details\">\n    <ion-card-title class=\"details\">Client : {{result?.Client}}</ion-card-title>\n    <ion-card-subtitle class=\"sub-details\">Location: {{result?.Location}}</ion-card-subtitle>\n    <ion-card-subtitle class=\"sub-details\">Installation Level : {{result?.Installation_Level}}</ion-card-subtitle>\n    <ion-card-subtitle class=\"sub-details\">Installation Status : {{result?.Installation_Status}}</ion-card-subtitle>\n    <ion-card-subtitle class=\"sub-details\">Date assigned : {{result?.Date_assigned}}</ion-card-subtitle>\n  </ion-card>\n\n    \n\n    \n  </div>\n  <div class=\"ion-text-center\">\n    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"back()\">Back</button>\n  </div>\n  &nbsp;\n  &nbsp;\n\n\n</ion-content>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Select</title>\n</head>\n<ion-header class=\"header\">\n  <!-- <ion-navbar class=\"navbar\"> -->\n  <ion-title>\n    <ion-icon src=\"../assets/notification-bell.svg\" class=\"bell\" (click)=\"notifications()\">\n    </ion-icon>\n    <div class=\"ion-text-center\">\n      <img src=\"../assets/top-right-logo.svg\" class=\"logo\">\n    </div>\n  </ion-title>\n  <!-- </ion-navbar> -->\n</ion-header>\n<ion-content overflow-scroll=\"true\">\n  <div class=\"container\">\n    <!-- <br> -->\n    <h1 class=\"ion-text-center\">Task Listing &ensp;</h1>\n\n  <ion-card class=\"detail\" *ngFor=\"let result of  installation_details let i=index \"  (click)=\"taskdetails(i)\">\n    <ion-card-title class=\"details\">Client : {{result?.Client}}</ion-card-title>\n    <ion-card-subtitle class=\"sub-details\">Location: {{result?.Location}}</ion-card-subtitle>\n    <ion-card-subtitle class=\"sub-details\">Installation Level : {{result?.Installation_Level}}</ion-card-subtitle>\n    <ion-card-subtitle class=\"sub-details\">Installation Status : {{result?.Installation_Status}}</ion-card-subtitle>\n    <ion-card-subtitle class=\"sub-details\">Date assigned : {{result?.Date_assigned}}</ion-card-subtitle>\n  </ion-card>\n\n    \n\n    \n  </div>\n  <div class=\"ion-text-center\">\n    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"back()\">Back</button>\n  </div>\n  &nbsp;\n  &nbsp;\n\n\n</ion-content>");
 
 /***/ }),
 
@@ -105,7 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "InstallationdetailsPage": () => (/* binding */ InstallationdetailsPage)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 8111);
-/* harmony import */ var _C_Users_Aneeza_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_installationdetails_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@angular-devkit/build-angular/node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./installationdetails.page.html */ 7334);
+/* harmony import */ var _C_Users_ASUS_Moile_Installation_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_installationdetails_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@angular-devkit/build-angular/node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./installationdetails.page.html */ 7334);
 /* harmony import */ var _installationdetails_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./installationdetails.page.scss */ 7637);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 4001);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 3252);
@@ -168,6 +168,13 @@ let InstallationdetailsPage = class InstallationdetailsPage {
             this.router.navigateByUrl('../home');
         });
     }
+    taskdetails(id) {
+        console.log(id);
+        this.router.navigateByUrl('task-details/' + id);
+    }
+    notifications() {
+        this.router.navigateByUrl('notifications');
+    }
     back() {
         this.router.navigateByUrl('home');
     }
@@ -180,7 +187,7 @@ InstallationdetailsPage.ctorParameters = () => [
 InstallationdetailsPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-installationdetails',
-        template: _C_Users_Aneeza_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_installationdetails_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_ASUS_Moile_Installation_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_installationdetails_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_installationdetails_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], InstallationdetailsPage);

@@ -3,25 +3,39 @@
  .container{
     margin-top: 1em;
   align-items: center;   
+  border-radius: 20px;
 }
 
 .h1{
     color: #194E78;
     text-align: center;
-    font-size: 16pt;
+    font-size: 25px;
     font-family:'Roboto';
+    font-weight: 700;
+    margin-top: 0.3em;
   }
 .label{
     margin: 1em;
 }
 .text{
     --placeholder-color:#6E6E6E;
-    margin-top: 2em;
-    width: 15em;
-    border: #194E78 solid;
+    margin-top: 3em;
+    margin-left: 1em;
+    width: 14em;
+    height: 2.5em;
+    border-radius: 2em;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 0%), 0 0px 12px 0 rgb(0 0 0 / 12%);
+    
     
     
 }
+
+.h6, h6 {
+  color: #194E78;
+  font-size: 15px;
+  font-weight: 700;
+}
+
 .attach-button{
     width: 0px auto; 
     height: 8em;
@@ -30,13 +44,13 @@
 .attach{
     align-items: center;
     margin-top: 0em;
-    height: 3em;
-    width: 7em;
+    height: 5em;
+    margin-bottom: -1em;
     border-radius: 10px;
     
 }
 .btn-secondary{
-    width: 5em;
+    width: 7em;
     background-color:#6E6E6E;
     color: white;
     border: #6E6E6E;
@@ -44,13 +58,13 @@
   
  }
   .btn-primary{
-    width: 5em;
+    width: 7em;
     background-color: #194E78;
     border: #194E78;
     border-radius: 5px;
   }
   .divider{
-    width:1em;
+    width:0.5em;
     height:auto;
     display:inline-block;
   }

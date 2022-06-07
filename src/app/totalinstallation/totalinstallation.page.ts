@@ -16,22 +16,6 @@ export class TotalinstallationPage implements OnInit {
 
   constructor(private router: Router, public activatedRoute: ActivatedRoute, private platform: Platform) { }
   ngOnInit() {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     console.log('Inside Ng On INit')
     this.sub = this.activatedRoute.params.subscribe(params => {
       this.refresh = params['refresh'];
@@ -47,40 +31,48 @@ export class TotalinstallationPage implements OnInit {
   call_api() {
     var refresh = true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('../home/'+refresh);
+      this.router.navigateByUrl('../home' + refresh);
     });
   }
 
   back() {
     this.router.navigateByUrl('home');
   }
+  notifications(){
+    this.router.navigateByUrl('notifications');
+  }
 
-  total_installation=[
-    {
-      Client: 'Javed Akhtar',
-      Location: 'New city',
-      Installation_Level: 'Level 2',
-      Installation_Status: 'Progressing',
-      Date_assigned: '24 - 11 - 2022',
-},
+  taskdetails(id) {
+    console.log (id)
+  this.router.navigateByUrl('task-details/'+id );
+}
 
- {
-      Client: 'Gul Ahmad',
-      Location: 'New city',
-      Installation_Level: 'Level 2',
-      Installation_Status: 'Progressing',
-      Date_assigned: '24 - 11 - 2022',
-    },
+total_installation = [
+  {
+    Client: 'Javed Akhtar',
+    Location: 'New city',
+    Installation_Level: 'Level 2',
+    Installation_Status: 'Progressing',
+    Date_assigned: '24 - 11 - 2022',
+  },
 
- {
-      Client: 'Atif Shezad',
-      Location: 'New city',
-      Installation_Level: 'Level 2',
-      Installation_Status: 'Progressing',
-      Date_assigned: '24 - 11 - 2022',
-    }
+  {
+    Client: 'Gul Ahmad',
+    Location: 'New city',
+    Installation_Level: 'Level 2',
+    Installation_Status: 'Progressing',
+    Date_assigned: '24 - 11 - 2022',
+  },
 
-  ]
+  {
+    Client: 'Atif Shezad',
+    Location: 'New city',
+    Installation_Level: 'Level 2',
+    Installation_Status: 'Progressing',
+    Date_assigned: '24 - 11 - 2022',
+  }
+
+]
 }
 
 

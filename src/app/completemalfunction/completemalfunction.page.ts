@@ -37,6 +37,27 @@ export class CompletemalfunctionPage implements OnInit {
     });
   }
 
+malfunction_data=[
+{
+client_name:'Shadab Khan',
+assigned_time:'Sunday, 23-03-2020',
+status: 'New',
+type:'Unidentified',
+level:'Danger',
+},
+  {
+    client_name: 'Akbar Khan',
+    assigned_time: 'Sunday, 23-03-2020',
+    status: 'New',
+    type: 'Unidentified',
+    level: 'Danger',
+  },
+
+]
+
+
+
+
   home() {
     this.router.navigateByUrl('home');
   }
@@ -46,10 +67,24 @@ export class CompletemalfunctionPage implements OnInit {
   completed() {
     this.router.navigateByUrl('completemalfunction');
   }
-  malfunctionsDetails() {
-    this.router.navigateByUrl('malfunctiondetails');
+  malfunctionsDetails(id) {
+    this.router.navigateByUrl('malfunctiondetails/'+id );
   }
-
-
+  profile(){
+    this.router.navigateByUrl('profile');
+  
+  }
+  settings(){
+    this.router.navigateByUrl('settings');
+  }
+  language(){
+    this.router.navigateByUrl('languages');
+  }
+  faq(){
+    this.router.navigateByUrl('faq');
+  }
+  notifications(){
+    this.router.navigateByUrl('notifications');
+  }
 
 }

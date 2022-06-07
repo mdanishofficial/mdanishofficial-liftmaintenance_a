@@ -71,7 +71,7 @@ const routes = [
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_completemalfunction_completemalfunction_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./completemalfunction/completemalfunction.module */ 2714)).then(m => m.CompletemalfunctionPageModule)
     },
     {
-        path: 'malfunctiondetails',
+        path: 'malfunctiondetails/:id',
         loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_malfunctiondetails_malfunctiondetails_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./malfunctiondetails/malfunctiondetails.module */ 1054)).then(m => m.MalfunctiondetailsPageModule)
     },
     {
@@ -93,6 +93,30 @@ const routes = [
     {
         path: 'payment-modal',
         loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_payment-modal_payment-modal_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./payment-modal/payment-modal.module */ 7234)).then(m => m.PaymentModalPageModule)
+    },
+    {
+        path: 'task-details/:id',
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_ng-bootstrap_ng-bootstrap_fesm2020_ng-bootstrap_mjs"), __webpack_require__.e("common"), __webpack_require__.e("src_app_task-details_task-details_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./task-details/task-details.module */ 4405)).then(m => m.TaskDetailsPageModule)
+    },
+    {
+        path: 'faq',
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_ng-bootstrap_ng-bootstrap_fesm2020_ng-bootstrap_mjs"), __webpack_require__.e("src_app_faq_faq_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./faq/faq.module */ 6334)).then(m => m.FAQPageModule)
+    },
+    {
+        path: 'settings',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_settings_settings_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./settings/settings.module */ 923)).then(m => m.SettingsPageModule)
+    },
+    {
+        path: 'profile',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_profile_profile_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./profile/profile.module */ 330)).then(m => m.ProfilePageModule)
+    },
+    {
+        path: 'notifications',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_notifications_notifications_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./notifications/notifications.module */ 1237)).then(m => m.NotificationsPageModule)
+    },
+    {
+        path: 'languages',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_languages_languages_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./languages/languages.module */ 7029)).then(m => m.LanguagesPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -122,7 +146,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AppComponent": () => (/* binding */ AppComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 8111);
-/* harmony import */ var _C_Users_Aneeza_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@angular-devkit/build-angular/node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./app.component.html */ 6224);
+/* harmony import */ var _C_Users_ASUS_Moile_Installation_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@angular-devkit/build-angular/node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./app.component.html */ 6224);
 /* harmony import */ var _app_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component.scss */ 836);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 4001);
 
@@ -136,7 +160,7 @@ AppComponent.ctorParameters = () => [];
 AppComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-root',
-        template: _C_Users_Aneeza_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_ASUS_Moile_Installation_mobile_installation_node_modules_angular_devkit_build_angular_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_app_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], AppComponent);
@@ -159,10 +183,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 8111);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 4001);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ 6219);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ 3252);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 3252);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 3981);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ 8058);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 6104);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app-routing.module */ 8438);
+
 
 
 
@@ -176,8 +202,8 @@ AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.NgModule)({
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule],
-        providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_6__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.IonicRouteStrategy }],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule, _angular_common_http__WEBPACK_IMPORTED_MODULE_6__.HttpClientModule],
+        providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_7__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.IonicRouteStrategy }],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
     })
 ], AppModule);
@@ -272,7 +298,7 @@ var map = {
 		"node_modules_ionic_core_dist_esm_ion-back-button_entry_js"
 	],
 	"./ion-backdrop.entry.js": [
-		430,
+		8612,
 		"node_modules_ionic_core_dist_esm_ion-backdrop_entry_js"
 	],
 	"./ion-breadcrumb_2.entry.js": [
